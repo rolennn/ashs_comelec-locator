@@ -14,20 +14,24 @@ def check_nan(data_pt):
 def create_card(marker, title, tel, email, loc):
     with st.expander(marker, expanded=False):
         st.markdown(f"#### {title}")
-        col1, col2, col3, col4 = st.columns([1,5,1,5])
-
-        with col1:
-            st.markdown("**Tel.:**")
-            st.markdown("**Email:**")
-        with col2:
-            st.markdown(tel)
-            st.markdown(email)
-        with col3:
+        
+        c11, c12 = st.columns([1, 12])
+        with c11:
             st.markdown("**Loc.:**")
-        with col4:
+        with c12:
             st.markdown(loc)
+        
+        c21, c22, c23, c24 = st.columns([1,5,1,5])
+        with c21:
+            st.markdown("**Tel.:**")
+        with c22:
+            st.markdown(tel)
+        with c23:
+            st.markdown("**Email:**")
+        with c24:
+            st.markdown(email)
 
-
+        
 def show_data(filtered):
     for i in range(len(filtered.index)):
         row = filtered.iloc[i]
