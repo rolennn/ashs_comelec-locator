@@ -4,6 +4,12 @@ import pandas as pd
 import find_offices
 
 
+# page configuration
+st.set_page_config(
+    page_title="Registration",
+    initial_sidebar_state="auto"
+)
+
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def process_data():
     offices_data = pd.read_csv("_data/offices_data.tsv", sep="\t", header=0)
