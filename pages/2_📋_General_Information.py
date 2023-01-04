@@ -59,7 +59,7 @@ The applicant must submit an accomplished [Application Form (Revised CEF-1-A)][1
 [5]: https://comelec.gov.ph/php-tpls-attachments/OverseasVoting/2023RegForms/AnnexE.pdf
 """
 text_requirements2 = """
-##### For registration
+##### For Identification
 The applicant must present an identification document that contains their signature and photograph. The following are the valid documents:
 - National identification (ID) card under the Philippine Identification System (PhilSys);
 - Employee's ID card, with the signature of the employer or authorized representative;
@@ -81,7 +81,7 @@ The applicant must present an identification document that contains their signat
 text_additional = """
 The information presented in this page was gathered from the [COMELEC Resolution No. 10868][1]. Procedures for transfer, change/corrections of entries in the registration records, reactivation of registration records, and similar activities can also be found in the resolution. Generally, you may refer to the [COMELEC website][2] for election-related information. 
 
-Additionally, the National Citizens’ Movement for Free Elections (NAFREL) maintains "[Vote For Us][3]", a voter information and outreach platform that aims to educate Filipinos on electoral processes. 
+Additionally, the National Citizens' Movement for Free Elections (NAFREL) maintains "[Vote For Us][3]", a voter information and outreach platform that aims to educate Filipinos on electoral processes. 
 
 [1]: https://comelec.gov.ph/?r=VoterRegistration/Resolutions/res10868
 [2]: https://comelec.gov.ph/
@@ -92,7 +92,8 @@ text_conclusion = """
 Good luck with the registration :>
 """
 
-st.subheader("Barangay and Sangguniang Kabataan (SK) Elections")
+
+st.title("Barangay and Sangguniang Kabataan (SK) Elections")
 st.markdown(text_intro)
 st.info("We hope that the information below can guide you in your application for registration.")
 
@@ -114,7 +115,7 @@ with st.expander("What are the requirements for registration?", expanded=False):
     st.markdown("---")
     st.markdown(text_requirements2)
     st.markdown("")
-    st.info("Please note that failure to establish the applicant's identity will lead to their application not being processed")
+    st.info("Please note that failure to establish the applicant's identity will lead to their application not being processed.")
 
 with st.expander("Where can I learn more about the registration?", expanded=False):
     st.markdown(text_additional)

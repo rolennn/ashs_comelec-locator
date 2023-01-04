@@ -33,7 +33,7 @@ def setup_page(data):
     """
 
     with introduction:
-        st.subheader("Registration Sites")  
+        st.title("Registration Sites")  
         st.markdown(text_intro)
     
     # `input_location` contains a space for the user to input their location
