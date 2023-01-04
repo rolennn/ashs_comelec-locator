@@ -80,7 +80,7 @@ def search(data, prov, mun):
     show_data(rap_prov)
 
     # present the rest of the RAP locations (not within MUN, PROV)
-    st.info("Alternatively, you may register in the following satellite offices through COMELEC's Register Anywhere Project (RAP)")
+    st.info("Alternatively, here are the RAP venues outside your province:")
 
     rap_rest = data[
         (data["PROV"] != prov) &
