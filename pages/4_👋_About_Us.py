@@ -12,7 +12,7 @@ st.set_page_config(
 content = """
 This web-app and other related promotional materials are under the “Para Saan Ka Boboto?” project of the [ASHS Commission on Elections][1] (ASHS ComElec). For any concerns or inquiries about this project or the information presented in this web-app, please feel free to contact us through our email (comelec.ashs@ateneo.edu). 
 
-We do not store data about the locations inputted in this web-app. Additionally, the source code is publicly hosted on the following repository: https://github.com/rolennn/ashs_comelec-locator. 
+We do not store data about the locations inputted in this web-app. Additionally, the source code is publicly hosted on the following repository: https://github.com/rolennn/ashs_comelec-skb. 
 
 [1]: https://www.facebook.com/ASHSCOMELEC
 """
