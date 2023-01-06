@@ -29,7 +29,7 @@ def setup_page(data):
 
     # `introduction` contains preliminary information re. the project 
     text_intro = """
-    Please input your current place of residence to identify the nearest polling station. Note that the Register Anywhere Project (RAP) venues within your municipality will be prioritized (if there are any), followed by the Office of the Election Officer (OEO) for your municipality/district, followed by the RAP venues within your province (if there are any). RAP venues outside your province will be displayed last. 
+    Please input your current place of residence to identify the nearest registration site. Note that the Register Anywhere Project (RAP) venues within your municipality will be prioritized (if there are any), followed by the Office of the Election Officer (OEO) for your municipality/district, followed by the RAP venues within your province (if there are any). RAP venues outside your province will be displayed last. 
     """
 
     with introduction:
@@ -38,7 +38,7 @@ def setup_page(data):
     
     # `input_location` contains a space for the user to input their location
     with input_location:
-        st.info("Please input your your current place of residence to identify the nearest polling station.")
+        st.info("Please input your your current place of residence to identify the nearest registration site.")
 
         loc = st.columns(2)
         submit =  st.columns([1, 4, 1])
@@ -56,11 +56,11 @@ def setup_page(data):
         submit[1].markdown(f"{province}, {municipality}")
         search = submit[2].button("Find Office")
 
-    # output_data
+    # `output_data` returns the list of available offices following this priority:
+    # (1) RAP (MUN); (2) OEO (MUN); (3) RAP (PROV); (4) RAP (rest)
     with output_data:
         if search:
             try:
-                st.info("You may register in any of the following locations:")
                 find_offices.search(data, province, municipality)
             except:
                 st.error("Unfortunately, we encountered difficulties searching for an office. Please try again later.")

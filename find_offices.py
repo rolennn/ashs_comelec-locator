@@ -52,6 +52,7 @@ def show_data(filtered):
 
 def search(data, prov, mun): 
     # every data received will be presented in an expander
+    st.info("You may register in any of the following locations:")
     
     # prioritize RAP locations within a MUN, PROV
     rap_mun = data[
